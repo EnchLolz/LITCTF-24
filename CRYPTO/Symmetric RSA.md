@@ -41,10 +41,12 @@ $$
 So with our first input `-1` we can add `1` to the result to get `n`. Now we just need to get `p` or `q`. Using FLT we can get `p` with this:
 
 $$
+\displaylines{
 (a^p \mod n) \equiv a^p \mod p \text{ (since p | n)} \\
 a^p \equiv a \mod p \text{ (by FLT)}\\
 (a^p \mod n) \equiv a \mod p \\
 (a^p \mod n)-a \equiv 0 \mod p \\
+}
 $$
 
 Since we can enter whatever `a` we want (not -1, 0, 1, and similar). We can get a multiple of `p` by taking the results of `pow(a,p,n)` and subtracting `a` from it. Now that we have `n` and a multiple of `p` we can run GCD to get `p`:

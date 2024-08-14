@@ -26,6 +26,8 @@ const jwtHeader = Buffer.from(
 
 ![Good JWT](/images/jwt2good.png)
 
+Now make sure to replace the `_` with `/` and `-` with `+`, since jwt.io uses url safe base64, but the server uses normal base64. You could also just change your name to `a` or anything else that doesn't contain a `_` or `-`:
+
 ![Flag](/images/jwt2flag.png)
 
 
